@@ -1,38 +1,120 @@
+img {
+  width: inherit;
+  height: inherit;
+  display: none;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+.wrapper {
+  display: flex;
+  width: 366px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+  display: grid;
+  grid: repeat(3, auto) / auto-flow;
+}
+
+.box {
+  background-color: #fff;
+  box-sizing: content-box;
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  padding: 0;
+  border: 1px solid #000;
+}
+
+.-inv {
+  display: initial;
+}
+
+.reset-button {
+  bottom: 50px;
+  position: fixed;
+}
+
+.-win1::after {
+  position: relative;
+  content: '';
+  top: 0;
+  left: -307px;
+  height: 366px;
+  border: 2px solid #f00;
+}
+
+.-win2::after {
+  position: relative;
+  content: '';
+  top: 0;
+  left: -185px;
+  height: 366px;
+  border: 2px solid #f00;
+}
+
+.-win3::after {
+  position: relative;
+  content: '';
+  top: 0;
+  left: -63px;
+  height: 366px;
+  border: 2px solid #f00;
+}
+
+.-win4::after {
+  position: relative;
+  content: '';
+  top: -121px;
+  left: -183px;
+  height: 366px;
+  border: 2px solid #f00;
+  rotate: 90deg;
+}
+
+.-win5::after {
+  position: relative;
+  content: '';
+  top: 0;
+  left: -183px;
+  height: 366px;
+  border: 2px solid #f00;
+  rotate: 90deg;
+
+}
+
+.-win6::after {
+  position: relative;
+  content: '';
+  top: 121px;
+  left: -183px;
+  height: 366px;
+  border: 2px solid #f00;
+  rotate: 90deg;
+}
+
+.-win7::after {
+  position: relative;
+  content: '';
+  left: -183px;
+  top: 0;
+  height: 362px;
+  border: 2px solid #f00;
+  rotate: -45deg;
+}
+
+.-win8::after {
+  position: relative;
+  content: '';
+  left: -183px;
+  top: 0;
+  height: 362px;
+  border: 2px solid #f00;
+  rotate: 45deg;
 }
