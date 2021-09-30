@@ -6,15 +6,19 @@ img {
 
 .App {
   display: flex;
-  height: 100vh;
-  flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  justify-content: space-around;
 }
 
-.wrapper {
+.content {
   display: flex;
-  width: 366px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-text {
+  margin: 30px 0;
+  font-size: 25px;
 }
 
 .container {
@@ -32,89 +36,133 @@ img {
   border: 1px solid #000;
 }
 
+.current-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.-desappear {
+  visibility: hidden;
+}
+
+.box.-current-img {
+  border: none;
+}
+
 .-inv {
   display: initial;
 }
 
 .reset-button {
-  bottom: 50px;
-  position: fixed;
+  z-index: 1;
+  width: 100px;
+  height: 50px;
+  background-color: #f00;
+}
+
+.reset-hidden {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 51%;
+    transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 100px;
+  height: 50px;
+  background-color: #f00;
+}
+
+.reset-hidden.-appear {
+  visibility: initial;
 }
 
 .-win1::after {
-  position: relative;
+  display: inline-block;
+  position: absolute;
   content: '';
-  top: 0;
-  left: -307px;
+  top: 93px;
+  left: 61px;
   height: 366px;
   border: 2px solid #f00;
 }
 
 .-win2::after {
-  position: relative;
+  display: inline-block;
+  position: absolute;
   content: '';
-  top: 0;
-  left: -185px;
+  top: 93px;
+  left: 183px;
   height: 366px;
   border: 2px solid #f00;
 }
 
 .-win3::after {
-  position: relative;
+  display: inline-block;
+  position: absolute;
   content: '';
-  top: 0;
-  left: -63px;
+  top: 93px;
+  left: 305px;
   height: 366px;
   border: 2px solid #f00;
 }
 
 .-win4::after {
-  position: relative;
+  display: inline-block;
+  position: absolute;
   content: '';
-  top: -121px;
-  left: -183px;
+  top: -30px;
+  left: 179px;
   height: 366px;
   border: 2px solid #f00;
   rotate: 90deg;
 }
 
 .-win5::after {
-  position: relative;
+  display: inline-block;
+  position: absolute;
   content: '';
-  top: 0;
-  left: -183px;
+  top: 90px;
+  left: 179px;
   height: 366px;
   border: 2px solid #f00;
   rotate: 90deg;
-
 }
 
 .-win6::after {
-  position: relative;
+  display: inline-block;
+  position: absolute;
   content: '';
-  top: 121px;
-  left: -183px;
+  top: 212px;
+  left: 179px;
   height: 366px;
   border: 2px solid #f00;
   rotate: 90deg;
 }
 
 .-win7::after {
-  position: relative;
+  display: inline-block;
+  position: absolute;
   content: '';
-  left: -183px;
-  top: 0;
+  top: 97px;
+  left: 186px;
   height: 362px;
   border: 2px solid #f00;
   rotate: -45deg;
 }
 
 .-win8::after {
-  position: relative;
+  display: inline-block;
+  position: absolute;
   content: '';
-  left: -183px;
-  top: 0;
+  top: 90px;
+  left: 186px;
   height: 362px;
   border: 2px solid #f00;
   rotate: 45deg;
+}
+
+.-blur {
+  filter: blur(4px);
 }
