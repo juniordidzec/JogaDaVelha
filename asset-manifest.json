@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/JogaDaVelha/static/css/main.f3701f05.chunk.css",
+    "main.js": "/JogaDaVelha/static/js/main.6c4eee24.chunk.js",
+    "main.js.map": "/JogaDaVelha/static/js/main.6c4eee24.chunk.js.map",
+    "runtime-main.js": "/JogaDaVelha/static/js/runtime-main.c15798e3.js",
+    "runtime-main.js.map": "/JogaDaVelha/static/js/runtime-main.c15798e3.js.map",
+    "static/js/2.9cf2088a.chunk.js": "/JogaDaVelha/static/js/2.9cf2088a.chunk.js",
+    "static/js/2.9cf2088a.chunk.js.map": "/JogaDaVelha/static/js/2.9cf2088a.chunk.js.map",
+    "index.html": "/JogaDaVelha/index.html",
+    "static/css/main.f3701f05.chunk.css.map": "/JogaDaVelha/static/css/main.f3701f05.chunk.css.map",
+    "static/js/2.9cf2088a.chunk.js.LICENSE.txt": "/JogaDaVelha/static/js/2.9cf2088a.chunk.js.LICENSE.txt",
+    "static/media/o.bba460ff.png": "/JogaDaVelha/static/media/o.bba460ff.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c15798e3.js",
+    "static/js/2.9cf2088a.chunk.js",
+    "static/css/main.f3701f05.chunk.css",
+    "static/js/main.6c4eee24.chunk.js"
+  ]
+}
