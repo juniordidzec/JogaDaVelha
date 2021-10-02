@@ -1,0 +1,14 @@
+.box.-noBorder {
+    border: none;
+}
+
+.current-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.-inv {
+    display: initial;
+}

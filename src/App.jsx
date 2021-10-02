@@ -1,14 +1,19 @@
 import React, {useState} from 'react';
+
+import CPlayer from './components/currentPlayer';
+import Button from './components/button';
+
 import './App.css';
-import xIMG from './assets/x.png';
-import oIMG from './assets/o.png'
+import '../src/components/currentPlayer.css';
+import '../src/components/button.css';
+import '../src/components/reset.css';
 
 export default function App() {
   const [matrix, setMatrix] = useState([['', '', ''], ['', '', ''], ['', '', '']]);
   const [player, setPlayer] = useState(Math.floor(Math.random() * 10) > 4 ? 2 : 1);
   const [win, setWin] = useState(false);
 
-  const zerar=()=>{
+  const Zerar=()=>{
     setMatrix([['', '', ''], ['', '', ''], ['', '', '']]);
     setPlayer(Math.floor(Math.random() * 10) > 4 ? 2 : 1);
     document.querySelector('.wrapper').classList.remove('-win1');
@@ -48,23 +53,6 @@ export default function App() {
     }
   }
 
-  const Btn=(linha, coluna)=>{
-    return(
-    <button className='box' onClick={(e)=>Jogar(linha, coluna)} >
-      <img src={xIMG} className={`${matrix[linha-1][coluna-1] === 1 ? '-inv' : ''}`} alt='Marcado com X' />
-      <img src={oIMG} className={`${matrix[linha-1][coluna-1] === 2 ? '-inv' : ''}`} alt='Marcado com O' />
-    </button>     
-    )
-  }
-
-  const Jogador=()=>{
-    return(
-      <button className='box -current-img'>
-        <img src={xIMG} className={`${player === 1 ? '-inv' : ''}`} alt='Marcado com X' />
-        <img src={oIMG} className={`${player === 2 ? '-inv' : ''}`} alt='Marcado com O' />
-      </button>
-    )
-  }
 
   const Ganhar=()=>{  
     if((matrix[0][0] === matrix[1][0] && matrix[1][0] === matrix[2][0] && matrix[1][0] !== '')) {
@@ -113,28 +101,25 @@ export default function App() {
 
   return (
     <main className='App'>
-      <div className='current-player'>
-        <h2 className='current-text'>Quem joga:</h2>
-        {Jogador()}
-      </div> 
+      <CPlayer player={player} />
       <div className='content'>
         <h1 className='main-text'>Jogo da velha</h1>
         <div className='wrapper'>  
           <div className='container'>
-            {Btn(1,1)}
-            {Btn(2,1)}
-            {Btn(3,1)}
-            {Btn(1,2)}
-            {Btn(2,2)}
-            {Btn(3,2)}
-            {Btn(1,3)}
-            {Btn(2,3)}
-            {Btn(3,3)}
+            <Button linha={1} coluna={1} matrix={matrix} Jogar={Jogar} />
+            <Button linha={2} coluna={1} matrix={matrix} Jogar={Jogar} />
+            <Button linha={3} coluna={1} matrix={matrix} Jogar={Jogar} />
+            <Button linha={1} coluna={2} matrix={matrix} Jogar={Jogar} />
+            <Button linha={2} coluna={2} matrix={matrix} Jogar={Jogar} />
+            <Button linha={3} coluna={2} matrix={matrix} Jogar={Jogar} />
+            <Button linha={1} coluna={3} matrix={matrix} Jogar={Jogar} />
+            <Button linha={2} coluna={3} matrix={matrix} Jogar={Jogar} />
+            <Button linha={3} coluna={3} matrix={matrix} Jogar={Jogar} />
           </div>
         </div>
       </div>
-      <button className='reset-hidden' onClick={()=>zerar()}>Reiniciar</button>
-      <button className='reset-button' onClick={()=>zerar()}>Reiniciar</button>
+      <button className='reset-hidden' onClick={()=>Zerar()}>Reiniciar</button>
+      <button className='reset-button' onClick={()=>Zerar()}>Reiniciar</button>
     </main>
   );
 }
